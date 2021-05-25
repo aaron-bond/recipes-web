@@ -21,7 +21,12 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
-      - run: npm run test
+
+      - name: npm dependencies
+        run: npm install
+
+      - name: Test Angular project
+        run: npm run test
 
   # This workflow contains a single job called "build"
   build:
