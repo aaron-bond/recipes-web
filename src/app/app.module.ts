@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { ShellComponent } from './shell/shell.component';
+
+const routes: Routes = [
+  /*
+  { path: ':gamertag', redirectTo: 'clips/:gamertag', pathMatch: 'full' },
+  { path: 'clips/:gamertag', component: ClipsComponent },
+  { path:'screenshots/:gamertag', component: ScreenshotsComponent }
+  */
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    ShellComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+
+    RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ ShellComponent ]
 })
 export class AppModule { }

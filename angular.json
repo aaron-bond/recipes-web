@@ -15,14 +15,14 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "r",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/recipes-web",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/app/app.main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -63,7 +63,8 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "watch": true
             }
           },
           "defaultConfiguration": "production"
@@ -72,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "recipe-web:build:production"
+              "browserTarget": "recipes-web:build:production"
             },
             "development": {
-              "browserTarget": "recipe-web:build:development"
+              "browserTarget": "recipes-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "recipe-web:build"
+            "browserTarget": "recipes-web:build"
           }
         },
         "test": {
@@ -107,5 +108,5 @@
       }
     }
   },
-  "defaultProject": "recipe-web"
+  "defaultProject": "recipes-web"
 }
