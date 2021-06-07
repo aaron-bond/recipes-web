@@ -7,8 +7,12 @@ import { LoginComponent } from './login/login.component';
 
 import { UserService } from 'src/services/user.service';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'profile', component: ProfileComponent }
+
   /*
   { path: ':gamertag', redirectTo: 'clips/:gamertag', pathMatch: 'full' },
   { path: 'clips/:gamertag', component: ClipsComponent },
@@ -19,7 +23,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     ShellComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
