@@ -1,0 +1,9 @@
+<input type="text" placeholder="Username" [(ngModel)]="userName">
+<br/>
+
+<input type="text" placeholder="Password" (keyup.enter)="HandleEnterKeyPress()" [(ngModel)]="password">
+<br/>
+
+<button (click)="HandleLoginClick()">
+    {{ loginPageTitle }}
+</button>

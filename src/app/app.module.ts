@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ShellComponent } from './shell/shell.component';
+import { LoginComponent } from './login/login.component';
+
+import { UserService } from 'src/services/user.service';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   /*
@@ -14,14 +18,18 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    ShellComponent
+    ShellComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
 
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [ ShellComponent ]
 })
 export class AppModule { }
